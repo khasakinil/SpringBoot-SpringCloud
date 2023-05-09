@@ -8,23 +8,24 @@ import javax.persistence.Id;
 
 @Entity
 public class CurrencyExchange {
-
+	
 	@Id
-	private long id;
-
+	private Long id;
+	
 	@Column(name = "currency_from")
 	private String from;
-
+	
 	@Column(name = "currency_to")
 	private String to;
+
 	private BigDecimal conversionMultiple;
 	private String environment;
 
 	public CurrencyExchange() {
-		super();
+		
 	}
-
-	public CurrencyExchange(long id, String from, String to, BigDecimal conversionMultiple) {
+	
+	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
 		super();
 		this.id = id;
 		this.from = from;
@@ -32,11 +33,11 @@ public class CurrencyExchange {
 		this.conversionMultiple = conversionMultiple;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -64,6 +65,7 @@ public class CurrencyExchange {
 		this.conversionMultiple = conversionMultiple;
 	}
 
+	
 	public String getEnvironment() {
 		return environment;
 	}
@@ -71,11 +73,6 @@ public class CurrencyExchange {
 	public void setEnvironment(String environment) {
 		this.environment = environment;
 	}
-
-	@Override
-	public String toString() {
-		return "CurrencyExchange [id=" + id + ", from=" + from + ", to=" + to + ", conversionMultiple="
-				+ conversionMultiple + "]";
-	}
+	
 
 }
