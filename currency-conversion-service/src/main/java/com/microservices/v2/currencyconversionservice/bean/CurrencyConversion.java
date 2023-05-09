@@ -3,7 +3,7 @@ package com.microservices.v2.currencyconversionservice.bean;
 import java.math.BigDecimal;
 
 public class CurrencyConversion {
-	private long id;
+	private Long id;
 	private String from;
 	private String to;
 	private BigDecimal quantity;
@@ -12,26 +12,26 @@ public class CurrencyConversion {
 	private String environment;
 
 	public CurrencyConversion() {
-		super();
+		
 	}
-
-	public CurrencyConversion(long id, String from, String to, BigDecimal quantity, BigDecimal conversionMultiple,
+	
+	public CurrencyConversion(Long id, String from, String to, BigDecimal quantity, BigDecimal conversionMultiple, 
 			BigDecimal totalCalculatedAmount, String environment) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.quantity = quantity;
 		this.conversionMultiple = conversionMultiple;
+		this.quantity = quantity;
 		this.totalCalculatedAmount = totalCalculatedAmount;
 		this.environment = environment;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -51,20 +51,20 @@ public class CurrencyConversion {
 		this.to = to;
 	}
 
-	public BigDecimal getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(BigDecimal quantity) {
-		this.quantity = quantity;
-	}
-
 	public BigDecimal getConversionMultiple() {
 		return conversionMultiple;
 	}
 
 	public void setConversionMultiple(BigDecimal conversionMultiple) {
 		this.conversionMultiple = conversionMultiple;
+	}
+
+	public BigDecimal getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(BigDecimal quantity) {
+		this.quantity = quantity;
 	}
 
 	public BigDecimal getTotalCalculatedAmount() {
@@ -82,12 +82,8 @@ public class CurrencyConversion {
 	public void setEnvironment(String environment) {
 		this.environment = environment;
 	}
-
-	@Override
-	public String toString() {
-		return "CurrencyConversion [id=" + id + ", from=" + from + ", to=" + to + ", quantity=" + quantity
-				+ ", conversionMultiple=" + conversionMultiple + ", totalCalculatedAmount=" + totalCalculatedAmount
-				+ ", environment=" + environment + "]";
-	}
+	
+	
+	
 
 }
