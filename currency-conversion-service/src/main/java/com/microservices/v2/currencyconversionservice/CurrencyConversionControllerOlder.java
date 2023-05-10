@@ -16,7 +16,7 @@ import com.microservices.v2.currencyconversionservice.proxy.CurrencyExchangeProx
 
 @RestController
 @RequestMapping("/api/currency-conversion")
-public class CurrencyConversionController {
+public class CurrencyConversionControllerOlder {
 	
 	@Autowired
 	private CurrencyExchangeProxy proxy;
