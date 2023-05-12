@@ -22,7 +22,7 @@ public class CurrencyExchangeController {
 	@Autowired
 	private Environment environment;
 	
-	@GetMapping("/currency-exchange/from/{from}/to/{to}")
+	@GetMapping("/api/currency-exchange/from/{from}/to/{to}")
 	public CurrencyExchange retrieveExchangeValue(
 			@PathVariable String from,
 			@PathVariable String to) {
@@ -34,7 +34,7 @@ public class CurrencyExchangeController {
 		
 		if(currencyExchange ==null) {
 			throw new RuntimeException
-				("Unable to Find data for - From : " + from + ", To : " + to);
+				("Unable to Find data for " + from + " to " + to);
 		}
 		
 		String port = environment.getProperty("local.server.port");
