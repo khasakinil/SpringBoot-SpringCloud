@@ -11,7 +11,7 @@ import com.microservices.v2.currencyconversionservice.bean.CurrencyConversion;
 @FeignClient(name="currency-exchange")
 public interface CurrencyExchangeProxy {
 	
-	@GetMapping("/currency-exchange/from/{from}/to/{to}")
+	@GetMapping("/api/currency-exchange/from/{from}/to/{to}")
 	public CurrencyConversion retrieveExchangeValue(
 			@PathVariable String from,
 			@PathVariable String to);
